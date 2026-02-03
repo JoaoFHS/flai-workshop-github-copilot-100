@@ -78,32 +78,64 @@ section h3 {
   margin-top: 15px;
   padding-top: 12px;
   border-top: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  padding: 12px;
+  border-radius: 4px;
 }
 
 .participants-heading {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #1a237e;
+  font-size: 14px;
 }
 
 .participants-list {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 .participants-list li {
-  padding: 5px 0 5px 20px;
+  padding: 8px 12px;
   position: relative;
   color: #555;
   font-size: 14px;
+  background-color: white;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  border-left: 3px solid #1a237e;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.participants-list li::before {
-  content: "•";
-  color: #1a237e;
-  font-weight: bold;
-  position: absolute;
-  left: 5px;
+.participants-list li:hover {
+  background-color: #f0f4ff;
+}
+
+.participant-email {
+  flex: 1;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 18px;
+  line-height: 1;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+}
+
+.delete-btn:hover {
+  background-color: #ffebee;
+  color: #b71c1c;
+  transform: scale(1.1);
 }
 
 .no-participants {
@@ -111,6 +143,8 @@ section h3 {
   font-style: italic;
   font-size: 14px;
   margin: 0;
+  padding: 8px;
+  text-align: center;
 }
 
 .form-group {
